@@ -1,0 +1,294 @@
+Microsoft Windows [Version 10.0.22631.3296]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Nicolas>psql -U posgres
+Password for user posgres:
+
+psql: error: FATAL:  password authentication failed for user "posgres"
+
+C:\Users\Nicolas>psql -U postgres
+Password for user postgres:
+
+psql (13.13)
+WARNING: Console code page (850) differs from Windows code page (1252)
+         8-bit characters might not work correctly. See psql reference
+         page "Notes for Windows users" for details.
+Type "help" for help.
+
+postgres=# create database desafio2_nicolas_ortiz_200;
+CREATE DATABASE
+postgres=# \c
+You are now connected to database "postgres" as user "postgres".
+postgres=# CREATE TABLE IF NOT EXISTS INSCRITOS(cantidad INT, fecha DATE, fuente
+postgres(# VARCHAR);
+CREATE TABLE
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente)
+postgres-# VALUES ( 44, '01/01/2021', 'Blog' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente)
+postgres-# VALUES ( 56, '01/01/2021', 'Página' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente)
+postgres-# VALUES ( 39, '01/02/2021', 'Blog' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente)
+postgres-# VALUES ( 81, '01/02/2021', 'Página' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente)
+postgres-# VALUES ( 12, '01/03/2021', 'Blog' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente)
+postgres-# VALUES ( 91, '01/03/2021', 'Página' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente)
+postgres-# VALUES ( 48, '01/04/2021', 'Blog' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente)
+postgres-# VALUES ( 45, '01/04/2021', 'Página' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente)
+postgres-# VALUES ( 55, '01/05/2021', 'Blog' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente)
+postgres-# VALUES ( 33, '01/05/2021', 'Página' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente)
+postgres-# VALUES ( 18, '01/06/2021', 'Blog' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente)
+postgres-# VALUES ( 12, '01/06/2021', 'Página' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente)
+postgres-# VALUES ( 34, '01/07/2021', 'Blog' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente)
+postgres-# VALUES ( 24, '01/07/2021', 'Página' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente)
+postgres-# VALUES ( 83, '01/08/2021', 'Blog' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente)
+postgres-# VALUES ( 99, '01/08/2021', 'Página' );
+INSERT 0 1
+postgres=#
+postgres=# SELECT *
+postgres-# SELECT * FROM INSCRITOS;
+ERROR:  syntax error at or near "SELECT"
+LINE 2: SELECT * FROM INSCRITOS;
+        ^
+postgres=#
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente)
+postgres-# VALUES ( 44, '01/01/2021', 'Blog' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente) VALUES ( 44, '01/01/2021', 'Blog' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente) VALUES ( 56, '01/01/2021', 'Página' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente) VALUES ( 39, '01/02/2021', 'Blog' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente) VALUES ( 81, '01/02/2021', 'Página' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente) VALUES ( 12, '01/03/2021', 'Blog' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente) VALUES ( 91, '01/03/2021', 'Página' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente) VALUES ( 48, '01/04/2021', 'Blog' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente) VALUES ( 45, '01/04/2021', 'Página' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente) VALUES ( 55, '01/05/2021', 'Blog' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente) VALUES ( 33, '01/05/2021', 'Página' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente) VALUES ( 18, '01/06/2021', 'Blog' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente) VALUES ( 12, '01/06/2021', 'Página' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente) VALUES ( 34, '01/07/2021', 'Blog' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente) VALUES ( 24, '01/07/2021', 'Página' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente) VALUES ( 83, '01/08/2021', 'Blog' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente) VALUES ( 99, '01/08/2021', 'Página' );
+INSERT 0 1
+postgres=# SELECT * FROM INSCRITOS;
+ cantidad |   fecha    | fuente
+----------+------------+--------
+       44 | 2021-01-01 | Blog
+       56 | 2021-01-01 | Página
+       39 | 2021-02-01 | Blog
+       81 | 2021-02-01 | Página
+       12 | 2021-03-01 | Blog
+       91 | 2021-03-01 | Página
+       48 | 2021-04-01 | Blog
+       45 | 2021-04-01 | Página
+       55 | 2021-05-01 | Blog
+       33 | 2021-05-01 | Página
+       18 | 2021-06-01 | Blog
+       12 | 2021-06-01 | Página
+       34 | 2021-07-01 | Blog
+       24 | 2021-07-01 | Página
+       83 | 2021-08-01 | Blog
+       99 | 2021-08-01 | Página
+       44 | 2021-01-01 | Blog
+       44 | 2021-01-01 | Blog
+       56 | 2021-01-01 | Página
+       39 | 2021-02-01 | Blog
+       81 | 2021-02-01 | Página
+       12 | 2021-03-01 | Blog
+       91 | 2021-03-01 | Página
+       48 | 2021-04-01 | Blog
+       45 | 2021-04-01 | Página
+       55 | 2021-05-01 | Blog
+       33 | 2021-05-01 | Página
+       18 | 2021-06-01 | Blog
+       12 | 2021-06-01 | Página
+       34 | 2021-07-01 | Blog
+       24 | 2021-07-01 | Página
+       83 | 2021-08-01 | Blog
+       99 | 2021-08-01 | Página
+(33 rows)
+
+
+postgres=#
+postgres=#
+postgres=#
+postgres=#
+postgres=#
+postgres=#
+postgres=#
+postgres=#
+postgres=#
+postgres=#
+postgres=#
+postgres=#
+postgres=#
+postgres=# delete from INSCRITOS where id=99;
+ERROR:  column "id" does not exist
+LINE 1: delete from INSCRITOS where id=99;
+                                    ^
+postgres=# TRUNCATE INSCRITOS;
+TRUNCATE TABLE
+postgres=# SELECT * FROM INSCRITOS;
+ cantidad | fecha | fuente
+----------+-------+--------
+(0 rows)
+
+
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente) VALUES ( 44, '01/01/2021', 'Blog' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente) VALUES ( 56, '01/01/2021', 'Página' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente) VALUES ( 39, '01/02/2021', 'Blog' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente) VALUES ( 81, '01/02/2021', 'Página' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente) VALUES ( 12, '01/03/2021', 'Blog' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente) VALUES ( 91, '01/03/2021', 'Página' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente) VALUES ( 48, '01/04/2021', 'Blog' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente) VALUES ( 45, '01/04/2021', 'Página' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente) VALUES ( 55, '01/05/2021', 'Blog' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente) VALUES ( 33, '01/05/2021', 'Página' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente) VALUES ( 18, '01/06/2021', 'Blog' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente) VALUES ( 12, '01/06/2021', 'Página' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente) VALUES ( 34, '01/07/2021', 'Blog' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente) VALUES ( 24, '01/07/2021', 'Página' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente) VALUES ( 83, '01/08/2021', 'Blog' );
+INSERT 0 1
+postgres=# INSERT INTO INSCRITOS(cantidad, fecha, fuente) VALUES ( 99, '01/08/2021', 'Página' );
+INSERT 0 1
+postgres=# SELECT * FROM INSCRITOS;
+ cantidad |   fecha    | fuente
+----------+------------+--------
+       44 | 2021-01-01 | Blog
+       56 | 2021-01-01 | Página
+       39 | 2021-02-01 | Blog
+       81 | 2021-02-01 | Página
+       12 | 2021-03-01 | Blog
+       91 | 2021-03-01 | Página
+       48 | 2021-04-01 | Blog
+       45 | 2021-04-01 | Página
+       55 | 2021-05-01 | Blog
+       33 | 2021-05-01 | Página
+       18 | 2021-06-01 | Blog
+       12 | 2021-06-01 | Página
+       34 | 2021-07-01 | Blog
+       24 | 2021-07-01 | Página
+       83 | 2021-08-01 | Blog
+       99 | 2021-08-01 | Página
+(16 rows)
+
+postgres=# ----------------------------------------------------
+postgres=# ----------------------------------------------------
+postgres=# -- AHORA SI A RESPONDER LAS QUERIES --
+postgres=# -- 1. ¿Cuántos registros hay? --
+postgres=# SELECT COUNT(*) FROM INSCRITOS;
+ count
+-------
+    16
+(1 row)
+
+
+postgres=# -- Existen 16 registros --
+postgres=# ----------------------------------------------------postgres=# ----------------------------------------------------
+postgres=# -- 2. ¿Cuántos inscritos hay en total? --
+postgres=# SELECT SUM(cantidad) FROM INSCRITOS;
+ sum
+-----
+ 774
+(1 row)
+
+postgres=# -- La cantidad de inscritos es 774 --
+postgres=# ----------------------------------------------------postgres=# ----------------------------------------------------
+postgres=# -- 3. ¿Cuál o cuáles son los registros de mayor antigüedad? --
+postgres=# SELECT * FROM INSCRITOS ORDER BY fecha LIMIT 1;
+ cantidad |   fecha    | fuente
+----------+------------+--------
+       44 | 2021-01-01 | Blog
+(1 row)
+
+
+postgres=# -- Los registros de mayor antigüedad datan del 2021-01-01 --
+postgres=# ----------------------------------------------------postgres=# ----------------------------------------------------
+postgres=# -- 4. ¿Cuántos inscritos hay por día? (entendiendo un día como una fecha distinta de ahora en adelante) --
+postgres=# SELECT fecha, SUM(cantidad) as suma_por_dia FROM INSCRITOS GROUP BY fecha;
+   fecha    | suma_por_dia
+------------+--------------
+ 2021-02-01 |          240
+ 2021-08-01 |          182
+ 2021-05-01 |           88
+ 2021-06-01 |           30
+ 2021-01-01 |          200
+ 2021-04-01 |          186
+ 2021-07-01 |           58
+ 2021-03-01 |          206
+(8 rows)
+
+
+postgres=# -- La tabla anterior indica los registros por día --
+postgres=# ----------------------------------------------------
+postgres=# ----------------------------------------------------
+postgres=# -- 5. ¿Qué día se inscribieron la mayor cantidad de personas y cuántas personas se inscribieron en ese día? --
+postgres=# SELECT fecha, SUM(cantidad) as suma_por_dia FROM INSCRITOS GROUP BY fecha ORDER BY suma_por_dia desc LIMIT 1;
+   fecha    | suma_por_dia
+------------+--------------
+ 2021-02-01 |          240
+(1 row)
+
+
+postgres=# -- La mayor cantidad de registros diarios fueron 240, el día 2021-02-01 --
+postgres=# ----------------------------------------------------postgres=# ----------------------------------------------------
+postgres=# \q
+
+C:\Users\Nicolas>
